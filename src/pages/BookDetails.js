@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 // R do CRUD: Read (GET), buscar detalhes de um livro específico
 function BookDetails() {
@@ -13,6 +13,8 @@ function BookDetails() {
     synopsis: "",
     id: 0,
   });
+
+  console.log(useParams());
 
   // 1. Receber o parâmetro de rota (da URL do navegador)
   const { id } = useParams();
@@ -38,6 +40,15 @@ function BookDetails() {
   // 6. Usa o state para renderizar o HTML
   return (
     <div className="mt-5">
+      <div className="mb-3 text-end">
+        <Link className="btn btn-warning me-3" to={`/book/update/${id}`}>
+          Editar
+        </Link>
+
+        <Link className="btn btn-danger" to={`/book/delete/${id}`}>
+          Deletar
+        </Link>
+      </div>
       <img
         className="img-fluid"
         src={state.coverImage}

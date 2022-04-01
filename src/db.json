@@ -4,8 +4,8 @@
       "title": "JavaScript for Babies",
       "author": "Sterling Children's",
       "releaseYear": "2016",
-      "genre": "programming",
-      "coverImage": "https://images-na.ssl-images-amazon.com/images/I/41zn5fvb7WL._SY309_BO1,204,203,200_.jpg",
+      "genre": "programming, technology",
+      "coverImage": "https://pbs.twimg.com/media/C8DxW7dXUAAv-Mj.jpg",
       "synopsis": "Coding and web-design skills are becoming more and more important in our technological world. These concept books will familiarize young ones with the kind of shapes and colors that make up web-based programming language and give them the head start they need.",
       "id": 1
     },
@@ -17,15 +17,6 @@
       "coverImage": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg",
       "synopsis": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code.",
       "id": 2
-    },
-    {
-      "title": "You Don't Know JS Yet: Get Started",
-      "author": "Kyle Simpson",
-      "releaseYear": "2020",
-      "genre": "Programming",
-      "coverImage": "https://m.media-amazon.com/images/I/410f-bUBR3L.jpg",
-      "synopsis": "It seems like there's never been as much widespread desire before for a better way to deeply learn the fundamentals of JavaScript. But with a million blogs, books, and videos out there, just where do you START? Look no further!\n\nThe worldwide best selling \"You Don't Know JS\" book series is back for a 2nd edition: \"You Don't Know JS Yet\". All 6 books are brand new, rewritten to cover all sides of JS for 2020 and beyond.",
-      "id": 3
     }
   ]
 }
