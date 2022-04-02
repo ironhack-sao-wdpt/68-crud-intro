@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../apis/api";
 
 import FormControl from "../components/form/FormControl";
 import TextAreaControl from "../components/form/TextAreaControl";
@@ -28,9 +28,9 @@ function BookCreate() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    axios
+    api
       // O método .post do Axios recebe 2 argumentos: o primeiro é a URL da rota da API e o segundo é o que será colocado no corpo (body) da requisição HTTP (e inserido no banco de dados)
-      .post("http://localhost:4000/books", state)
+      .post("/books", state)
       .then((response) => {
         console.log(response.data);
         // Se a criação foi bem-sucedida, redirecionar o usuário de volta pra Home
