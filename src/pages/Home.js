@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../apis/api";
 
 // "R" do CRUD: Read (GET), devemos listar os livros existentes
 function Home() {
@@ -11,8 +11,9 @@ function Home() {
   // 1. Executar tudo dentro do useEffect
   useEffect(() => {
     // 2. Usar o Axios para trazer a lista de livros
-    axios
-      .get("http://localhost:4000/books")
+    api
+      // Só precisamos chamar "/books" porque o domínio da API está configurado no arquivo apis/api.js
+      .get("/books")
       .then((response) => {
         // 3. Atualizar o state
         setState([...response.data]);
