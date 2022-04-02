@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import api from "../apis/api";
 
 // D do CRUD: Delete (DELETE): Apagar um registro existente
 function BookDelete() {
@@ -13,8 +13,8 @@ function BookDelete() {
       "Você tem certeza que deseja deletar este livro?"
     );
     if (areYouSure) {
-      return axios
-        .delete(`http://localhost:4000/books/${id}`)
+      return api
+        .delete(`/books/${id}`)
         .then((response) => {
           navigate("/");
         })
