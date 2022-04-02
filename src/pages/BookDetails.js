@@ -1,6 +1,7 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+
+import api from "../apis/api";
 
 // R do CRUD: Read (GET), buscar detalhes de um livro específico
 function BookDetails() {
@@ -26,7 +27,7 @@ function BookDetails() {
       try {
         // 3. Buscar os detalhes do livro específico que o usuário clicou
         // 4. Solicitar detalhes do livro pelo Axios
-        const response = await axios.get(`http://localhost:4000/books/${id}`);
+        const response = await api.get(`/books/${id}`);
 
         // 5. Atualizar o state
         setState({ ...response.data });

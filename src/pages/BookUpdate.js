@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import api from "../apis/api";
 
 import FormControl from "../components/form/FormControl";
 import TextAreaControl from "../components/form/TextAreaControl";
@@ -26,7 +26,7 @@ function BookUpdate() {
       try {
         // 3. Buscar os detalhes do livro específico que o usuário clicou
         // 4. Solicitar detalhes do livro pelo Axios
-        const response = await axios.get(`http://localhost:4000/books/${id}`);
+        const response = await api.get(`/books/${id}`);
 
         // 5. Atualizar o state
         setState({ ...response.data });
@@ -47,10 +47,7 @@ function BookUpdate() {
 
     try {
       // PUT vs. PATCH: o PUT é a ação de substituição, enquanto o PATCH é a de atualização. O PUT tem potencial de destruir informação caso o objeto enviado na requisição PUT não contenha todos os campos que o objeto original contém
-      const response = await axios.patch(
-        `http://localhost:4000/books/${id}`,
-        state
-      );
+      const response = await api.patch(`/books/${id}`, state);
 
       console.log(response.data);
 
