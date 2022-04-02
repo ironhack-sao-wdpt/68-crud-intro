@@ -53,7 +53,6 @@ function Home() {
                   {/* <Link to={`/book/${id}`} className="btn btn-primary">
                     Ver detalhes
                   </Link> */}
-                  <p>Teste Pedro</p>
                 </div>
               </div>
             </div>
