@@ -8,6 +8,7 @@ import BookDetails from "../pages/BookDetails";
 import BookCreate from "../pages/BookCreate";
 import BookUpdate from "../pages/BookUpdate";
 import BookDelete from "../pages/BookDelete";
+import About from "../pages/About";
 
 // 1. Instalar json-server como dependência global:
 // Windows
@@ -35,6 +36,7 @@ function App() {
           <Route path="/book/create" element={<BookCreate />} />
           <Route path="/book/update/:id" element={<BookUpdate />} />
           <Route path="/book/delete/:id" element={<BookDelete />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </div>
